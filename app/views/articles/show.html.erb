@@ -1,0 +1,8 @@
+<div class="title">
+  <h1><%= @article.title %></h1>
+  <h2>
+  <%= link_to "", edit_article_path, class: "fa-regular fa-pencil" %>
+  <%= link_to "", article_path(@article), class: "fa-regular fa-trash-can", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </h2>
+</div>
+<p><%= @article.content %></p>
